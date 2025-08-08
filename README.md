@@ -1,7 +1,7 @@
 
 
 # RISC-V Toolchain Setup and Verification Tasks
-
+by Rohn Eldho
 ## Table of Contents
 - [Task 1: RISC-V Toolchain Setup](#task-1-risc-v-toolchain-setup)
 - [Task 2: Local RISC-V Verification](#task-2-local-risc-v-verification)
@@ -20,7 +20,8 @@ Successfully set up complete RISC-V development environment including:
 - Verification through unique test program
 
 ### Setup Verification
-![Toolchain Verification](Screenshot%20from%202025-08-02%2023-50-51.png)
+<img width="924" height="152" alt="task1out" src="https://github.com/user-attachments/assets/ab2f0d59-34be-4a54-9b94-2043e53efa6c" />
+
 *Successful execution of unique test program showing:*
 - *Username: rohn*
 - *Hostname: rohn-VirtualBox*
@@ -39,7 +40,8 @@ riscv64-unknown-elf-gcc -O2 -Wall -march=rv64imac -mabi=lp64 \
 unique_test.c -o unique_test
 
 # Execution
-spike pk ./unique_test
+spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
+
 ```
 
 ## Task 2: Local RISC-V Verification
@@ -51,49 +53,39 @@ spike pk ./unique_test
 4. **bubble_sort.c** - Bubble sort implementation
 
 ### Assembly Generation Examples
-![factorial.s](out1.png)
-*Disassembled main function from factorial.c showing RISC-V instructions*
+<img width="536" height="300" alt="out1" src="https://github.com/user-attachments/assets/f60ec2ce-c23b-41c8-9f85-c7aff3c2a023" />
 
-![max_array.s](out2.png)
+*Disassembled main function from factorial.c showing RISC-V instructions*
+<img width="536" height="703" alt="out2" src="https://github.com/user-attachments/assets/809fe445-8213-4d93-a5ab-b1d609c721fa" />
+
 *Disassembled main function from max_array.c*
 
-![bitops.s](out3.png)
+<img width="536" height="662" alt="out3" src="https://github.com/user-attachments/assets/e9cf760d-4848-4342-9136-3c974e127919" />
+
 *Disassembled main function from bitops.c*
 
-![bubble_sort.s](out4.png)
+<img width="536" height="662" alt="out4" src="https://github.com/user-attachments/assets/fcd8894b-792b-4a28-946a-a073dbd6af4f" />
+
 *Disassembled main function from bubble_sort.c*
 
 ### Program Outputs
-![Factorial Output](factorial.png)
+<img width="348" height="322" alt="factorial" src="https://github.com/user-attachments/assets/a65ddb9b-e0b4-4b50-a3f1-a6fb9b201d1a" />
+
 *Factorial program output showing ProofID: 0x56f548c1345da29a*
 
-![Max Array Output](max_array.png)
+<img width="348" height="315" alt="max_array" src="https://github.com/user-attachments/assets/2c87d34c-7627-4fc5-bcbf-8f2044b72346" />
+
 *Max array program output showing RunID: 0xcd608e734299ce23*
 
-![Bitops Output](bitops.png)
+<img width="348" height="404" alt="bitops" src="https://github.com/user-attachments/assets/7b63d332-a307-4879-8062-65e6693cefc2" />
+
 *Bitwise operations program output*
 
-![Bubble Sort Output](bubble_sort.png)
+<img width="348" height="317" alt="bubble_sort" src="https://github.com/user-attachments/assets/58dec4c2-7681-4d69-bc66-706688b91aca" />
+
 *Bubble sort program output showing sorted array*
 
-## GitHub Repository
-![GitHub Activity](Screenshot%20from%202025-08-08%2022-27-20.png)
-*Repository activity showing commits for both tasks*
 
-### Repository Structure
-```
-vsdRiscvSoc/
-├── Task1/
-│   ├── unique_test.c
-│   └── unique_test_output.png
-├── Task2/
-│   ├── unique.h
-│   ├── factorial.*
-│   ├── max_array.*
-│   ├── bitops.*
-│   ├── bubble_sort.*
-│   └── instruction_decoding.md
-└── README.md
 ```
 
 ## Instruction Decoding
