@@ -52,3 +52,4 @@ This repository contains my complete submission for **Task 1** of the VSD RISC-V
   riscv64-unknown-elf-gcc -O2 -Wall -march=rv64imac -mabi=lp64 \
   -DUSERNAME="$(id -un)" -DHOSTNAME="$(hostname -s)" \
   unique_test.c -o unique_test
+<img width="924" height="152" alt="image" src="https://github.com/user-attachments/assets/92e84bd2-d1de-4b1e-b7af-1ce665bab0ed" />
