@@ -19,6 +19,29 @@ Successfully set up complete RISC-V development environment including:
 - Proxy kernel (riscv-pk)
 - Verification through unique test program
 
+## 📌 Additional Proof
+
+This section addresses the review feedback and adds the missing elements.
+
+### 1. Toolchain Version Proof
+As per the review, screenshots and outputs of `riscv64-unknown-elf-gcc -v` and `spike` version are added.
+
+```bash
+$ riscv64-unknown-elf-gcc -v
+Using built-in specs.
+COLLECT_GCC=riscv64-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/path/to/riscv64-unknown-elf-gcc/libexec/gcc/riscv64-unknown-elf/8.3.0/lto-wrapper
+Target: riscv64-unknown-elf
+Configured with: ...
+Thread model: single
+gcc version 8.3.0 (GCC)
+<img width="1199" height="334" alt="task1_gcc_version" src="https://github.com/user-attachments/assets/8277a764-8e21-49e1-8df6-e7e2f49bd6fa" />
+
+$ spike
+Spike RISC-V ISA Simulator 1.1.1-dev
+<img width="646" height="94" alt="task1_spike_version" src="https://github.com/user-attachments/assets/f76af669-c211-4409-b9be-f8b7a0e27bbb" />
+
+
 ### Setup Verification
 <img width="924" height="152" alt="task1out" src="https://github.com/user-attachments/assets/ab2f0d59-34be-4a54-9b94-2043e53efa6c" />
 
@@ -67,6 +90,24 @@ spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
 <img width="536" height="662" alt="out4" src="https://github.com/user-attachments/assets/fcd8894b-792b-4a28-946a-a073dbd6af4f" />
 
 *Disassembled main function from bubble_sort.c*
+
+### Task 2 – Main Assembly Screenshots
+
+The <main> assembly has now been extracted for all four programs using:
+
+riscv64-unknown-elf-objdump -d <program> | grep -A30 "<main>:" > <program>_main_objdump.txt
+
+Factorial Main Assembly:
+<img width="903" height="658" alt="Screenshot from 2025-08-10 12-08-04" src="https://github.com/user-attachments/assets/2ac2fb2f-bd0a-44e9-9616-3297b439b0da" />
+
+Max Array Main Assembly:
+<img width="903" height="658" alt="Screenshot from 2025-08-10 12-08-21" src="https://github.com/user-attachments/assets/7ee67ef0-0f43-4f81-90f9-fee494b43988" />
+
+Bitops Main Assembly:
+<img width="903" height="658" alt="Screenshot from 2025-08-10 12-08-30" src="https://github.com/user-attachments/assets/29518a9e-afac-4955-b3e4-0754dd787ec5" />
+
+Bubble Sort Main Assembly:
+<img width="903" height="658" alt="Screenshot from 2025-08-10 12-09-51" src="https://github.com/user-attachments/assets/c4954af7-c5d7-468d-9d18-9c4883c34b57" />
 
 ### Program Outputs
 <img width="348" height="322" alt="factorial" src="https://github.com/user-attachments/assets/a65ddb9b-e0b4-4b50-a3f1-a6fb9b201d1a" />
