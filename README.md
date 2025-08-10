@@ -35,15 +35,15 @@ Target: riscv64-unknown-elf
 Configured with: ...
 Thread model: single
 gcc version 8.3.0 (GCC)
-<img width="1199" height="334" alt="task1_gcc_version" src="https://github.com/user-attachments/assets/8277a764-8e21-49e1-8df6-e7e2f49bd6fa" />
+
 
 $ spike
 Spike RISC-V ISA Simulator 1.1.1-dev
-<img width="646" height="94" alt="task1_spike_version" src="https://github.com/user-attachments/assets/f76af669-c211-4409-b9be-f8b7a0e27bbb" />
+
 
 
 ### Setup Verification
-<img width="924" height="152" alt="task1out" src="https://github.com/user-attachments/assets/ab2f0d59-34be-4a54-9b94-2043e53efa6c" />
+
 
 *Successful execution of unique test program showing:*
 - *Username: rohn*
@@ -66,6 +66,10 @@ unique_test.c -o unique_test
 spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
 
 ```
+### Task 1 : Screenshots-
+<img width="1199" height="334" alt="task1_gcc_version" src="https://github.com/user-attachments/assets/8277a764-8e21-49e1-8df6-e7e2f49bd6fa" />
+<img width="646" height="94" alt="task1_spike_version" src="https://github.com/user-attachments/assets/f76af669-c211-4409-b9be-f8b7a0e27bbb" />
+<img width="924" height="152" alt="task1out" src="https://github.com/user-attachments/assets/ab2f0d59-34be-4a54-9b94-2043e53efa6c" />
 
 ## Task 2: Local RISC-V Verification
 
